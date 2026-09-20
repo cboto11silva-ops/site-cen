@@ -9,7 +9,7 @@ O que confere:
      que não existem no projeto e não são nativas conhecidas, recursos incompatíveis com PHP 7.4.
   2. content-schema.json: JSON válido, chaves únicas, tipos válidos, imagens padrão existentes,
      e todas as chaves C('...') usadas em site.js existem (e campos sem uso são avisados).
-  3. Rotas: app/api.php x dev/mock-server.mjs x chamadas api() do JavaScript.
+  3. Rotas: app/api.php x dev/mock-core.mjs (simulador) x chamadas api() do JavaScript.
   4. JavaScript: node --check em cada arquivo (se o Node existir).
   5. Segredos: config.php, installed.lock e uploads não podem estar na pasta a ser empacotada.
 
@@ -160,13 +160,15 @@ php_routes = set(re.findall(r"\['(GET|POST|PUT|DELETE)',\s+'([^']+)',\s+'(h_\w+)
 for m, p, h, a in php_routes:
     if h not in defined: err(f'api.php: handler {h} da rota {m} {p} não existe')
 patterns = [(m, re.compile('^' + re.sub(r'\{[a-z]+\}', '[^/]+', p) + '$')) for m, p, h, a in php_routes]
-mock_path = os.path.join(ROOT, 'dev', 'mock-server.mjs')
+mock_path = os.path.join(ROOT, 'dev', 'mock-core.mjs')
+if not os.path.isfile(mock_path):
+    mock_path = os.path.join(ROOT, 'dev', 'mock-server.mjs')
 if os.path.isfile(mock_path):
     mock = open(mock_path, encoding='utf-8').read()
     block = mock.split('const ROUTES = [')[1].split('];')[0]
     mock_routes = set(re.findall(r"\['(GET|POST|PUT|DELETE)', '([^']+)', '(\w+)'\]", block))
     php_set = {(m, p, a) for m, p, h, a in php_routes}
-    for r in sorted(php_set - mock_routes): err(f'rota só no PHP (falta no simulador dev/mock-server.mjs): {r}')
+    for r in sorted(php_set - mock_routes): err(f'rota só no PHP (falta no simulador dev/mock-core.mjs): {r}')
     for r in sorted(mock_routes - php_set): err(f'rota só no simulador (falta no PHP): {r}')
 def first_arg(src, start):
     depth, i, q, buf = 0, start, None, ''
