@@ -1,0 +1,752 @@
+{
+ "groups": [
+  {
+   "id": "geral",
+   "label": "Identidade e compartilhamento",
+   "fields": [
+    {
+     "key": "site.name",
+     "label": "Nome da igreja",
+     "type": "text",
+     "default": "Comunidade Entre Nações"
+    },
+    {
+     "key": "site.short",
+     "label": "Sigla",
+     "type": "text",
+     "default": "CEN"
+    },
+    {
+     "key": "seo.title",
+     "label": "Título do site (aba do navegador e Google)",
+     "type": "text",
+     "default": "Comunidade Entre Nações (CEN) – Petrolina-PE"
+    },
+    {
+     "key": "seo.description",
+     "label": "Descrição para o Google e para links compartilhados",
+     "type": "textarea",
+     "default": "Comunidade Entre Nações é uma igreja em Petrolina-PE que adora a Deus, ama ao próximo e serve a cidade. Confira a programação, eventos, pedidos de oração e como fazer parte.",
+     "help": "Até 160 caracteres funciona melhor."
+    },
+    {
+     "key": "seo.image",
+     "label": "Imagem ao compartilhar o link (WhatsApp, redes)",
+     "type": "image",
+     "default": "/assets/img/foto-culto.jpg",
+     "help": "Ideal: 1200 x 630 pixels."
+    }
+   ]
+  },
+  {
+   "id": "contato",
+   "label": "Contato, endereço e redes sociais",
+   "fields": [
+    {
+     "key": "contact.email",
+     "label": "E-mail de contato (aparece no site)",
+     "type": "text",
+     "default": "comunidadeentrenacoes@cen.com.br"
+    },
+    {
+     "key": "contact.whatsapp",
+     "label": "WhatsApp da igreja",
+     "type": "text",
+     "default": "",
+     "help": "Somente números, com país e DDD. Exemplo: 5587999999999. Se ficar vazio, o botão flutuante do WhatsApp não aparece."
+    },
+    {
+     "key": "contact.whatsapp_text",
+     "label": "Mensagem inicial do WhatsApp",
+     "type": "text",
+     "default": "Olá! Vim pelo site da CEN e gostaria de mais informações."
+    },
+    {
+     "key": "contact.city",
+     "label": "Cidade",
+     "type": "text",
+     "default": "Petrolina, Pernambuco"
+    },
+    {
+     "key": "contact.address",
+     "label": "Endereço (opcional)",
+     "type": "text",
+     "default": "",
+     "help": "Se ficar vazio, o endereço não aparece no site."
+    },
+    {
+     "key": "contact.map_url",
+     "label": "Link do mapa (Google Maps)",
+     "type": "url",
+     "default": "",
+     "help": "Cole o link de compartilhamento do Google Maps. Cria o botão \"Como chegar\"."
+    },
+    {
+     "key": "contact.service_time",
+     "label": "Horário do culto principal",
+     "type": "text",
+     "default": "Cultos aos domingos, às 18h"
+    },
+    {
+     "key": "social.instagram",
+     "label": "Instagram",
+     "type": "url",
+     "default": "https://www.instagram.com/cenpetrolina/"
+    },
+    {
+     "key": "social.youtube",
+     "label": "YouTube",
+     "type": "url",
+     "default": "https://www.youtube.com/@cenpetrolina"
+    },
+    {
+     "key": "social.facebook",
+     "label": "Facebook",
+     "type": "url",
+     "default": ""
+    },
+    {
+     "key": "footer.about",
+     "label": "Texto do rodapé",
+     "type": "textarea",
+     "default": "Uma comunidade de discípulos que fazem discípulos: adorando a Deus, amando ao próximo e servindo a cidade de Petrolina."
+    }
+   ]
+  },
+  {
+   "id": "inicio",
+   "label": "Página inicial",
+   "fields": [
+    {
+     "key": "home.hero.badge",
+     "label": "Faixa acima do título",
+     "type": "text",
+     "default": "Domingos, às 18h, em Petrolina-PE"
+    },
+    {
+     "key": "home.hero.title",
+     "label": "Título principal",
+     "type": "text",
+     "default": "Comunidade Entre Nações"
+    },
+    {
+     "key": "home.hero.text",
+     "label": "Texto de apresentação",
+     "type": "textarea",
+     "default": "Uma comunidade de discípulos, que fazem discípulos: adorar a Deus, amar ao próximo e servir a cidade de Petrolina."
+    },
+    {
+     "key": "home.hero.cta1",
+     "label": "Botão principal",
+     "type": "text",
+     "default": "Ver programação"
+    },
+    {
+     "key": "home.hero.cta2",
+     "label": "Botão secundário",
+     "type": "text",
+     "default": "Fazer pedido de oração"
+    },
+    {
+     "key": "home.hero.image",
+     "label": "Foto principal",
+     "type": "image",
+     "default": "/assets/img/foto-culto.jpg"
+    },
+    {
+     "key": "home.hero.image_alt",
+     "label": "Descrição da foto principal (acessibilidade)",
+     "type": "text",
+     "default": "Comunidade reunida durante um culto na CEN Petrolina"
+    },
+    {
+     "key": "home.hero.image2",
+     "label": "Foto secundária",
+     "type": "image",
+     "default": "/assets/img/foto-louvor.jpg"
+    },
+    {
+     "key": "home.hero.image2_alt",
+     "label": "Descrição da foto secundária (acessibilidade)",
+     "type": "text",
+     "default": "Ministério de louvor durante o culto"
+    },
+    {
+     "key": "home.about.title",
+     "label": "Quem somos: título",
+     "type": "text",
+     "default": "Adorar, amar e servir, em cada estação da vida."
+    },
+    {
+     "key": "home.about.text",
+     "label": "Quem somos: texto",
+     "type": "textarea",
+     "default": "Somos a Comunidade Entre Nações, uma igreja em Petrolina-PE que quer caminhar com você e com a sua família."
+    },
+    {
+     "key": "home.pillar1.title",
+     "label": "Pilar 1: título",
+     "type": "text",
+     "default": "Adorar a Deus"
+    },
+    {
+     "key": "home.pillar1.text",
+     "label": "Pilar 1: texto",
+     "type": "textarea",
+     "default": "Vivemos uma adoração genuína, de coração aberto, em cada culto e em cada dia."
+    },
+    {
+     "key": "home.pillar2.title",
+     "label": "Pilar 2: título",
+     "type": "text",
+     "default": "Amar ao próximo"
+    },
+    {
+     "key": "home.pillar2.text",
+     "label": "Pilar 2: texto",
+     "type": "textarea",
+     "default": "Somos uma comunidade de discípulos que fazem discípulos, cuidando uns dos outros como família."
+    },
+    {
+     "key": "home.pillar3.title",
+     "label": "Pilar 3: título",
+     "type": "text",
+     "default": "Servir a cidade"
+    },
+    {
+     "key": "home.pillar3.text",
+     "label": "Pilar 3: texto",
+     "type": "textarea",
+     "default": "Trabalhamos para implantar os valores do Reino em Petrolina, com ação prática e presença constante."
+    },
+    {
+     "key": "home.week.title",
+     "label": "Programação da semana: título",
+     "type": "text",
+     "default": "Programação da semana"
+    },
+    {
+     "key": "home.week.text",
+     "label": "Programação da semana: texto",
+     "type": "textarea",
+     "default": "Encontros durante toda a semana. Escolha o melhor para você e venha."
+    },
+    {
+     "key": "home.week.image",
+     "label": "Programação da semana: cartaz",
+     "type": "image",
+     "default": "/assets/img/programacao-semanal.jpg",
+     "help": "Também aparece na página Eventos. Troque quando a programação mudar."
+    },
+    {
+     "key": "home.week.image_alt",
+     "label": "Programação da semana: descrição do cartaz",
+     "type": "text",
+     "default": "Cartaz com a programação semanal da CEN Petrolina"
+    },
+    {
+     "key": "home.week.cta",
+     "label": "Programação da semana: texto do link",
+     "type": "text",
+     "default": "Ver programação completa"
+    },
+    {
+     "key": "home.news.title",
+     "label": "Novidades: título",
+     "type": "text",
+     "default": "Novidades da CEN"
+    },
+    {
+     "key": "home.news.text",
+     "label": "Novidades: texto",
+     "type": "textarea",
+     "default": "O que está acontecendo na nossa comunidade."
+    },
+    {
+     "key": "home.news.cta",
+     "label": "Novidades: texto do link",
+     "type": "text",
+     "default": "Acompanhar no Instagram"
+    },
+    {
+     "key": "home.visit.title",
+     "label": "Visita: título",
+     "type": "text",
+     "default": "Venha nos visitar"
+    },
+    {
+     "key": "home.visit.text",
+     "label": "Visita: texto",
+     "type": "textarea",
+     "default": "Você é bem-vindo em qualquer encontro. Chegue um pouco antes para ser recebido pela nossa equipe de boas-vindas."
+    },
+    {
+     "key": "home.steps.title",
+     "label": "Próximo passo: título",
+     "type": "text",
+     "default": "Dê o próximo passo"
+    },
+    {
+     "key": "home.step1.title",
+     "label": "Passo 1: título",
+     "type": "text",
+     "default": "Ofertas e Dízimos"
+    },
+    {
+     "key": "home.step1.text",
+     "label": "Passo 1: texto",
+     "type": "text",
+     "default": "Como contribuir e semear com a obra da CEN."
+    },
+    {
+     "key": "home.step2.title",
+     "label": "Passo 2: título",
+     "type": "text",
+     "default": "Área do Membro"
+    },
+    {
+     "key": "home.step2.text",
+     "label": "Passo 2: texto",
+     "type": "text",
+     "default": "Cadastre-se e faça parte oficialmente da família CEN."
+    },
+    {
+     "key": "home.step3.title",
+     "label": "Passo 3: título",
+     "type": "text",
+     "default": "Pedido de Oração"
+    },
+    {
+     "key": "home.step3.text",
+     "label": "Passo 3: texto",
+     "type": "text",
+     "default": "Compartilhe seu pedido com a nossa equipe de intercessão."
+    }
+   ]
+  },
+  {
+   "id": "eventos",
+   "label": "Página Eventos",
+   "fields": [
+    {
+     "key": "events.hero.title",
+     "label": "Título",
+     "type": "text",
+     "default": "Eventos"
+    },
+    {
+     "key": "events.hero.text",
+     "label": "Texto de apresentação",
+     "type": "textarea",
+     "default": "Cultos, encontros e momentos de comunhão para caminhar junto com a nossa comunidade."
+    },
+    {
+     "key": "events.hero.image",
+     "label": "Imagem",
+     "type": "image",
+     "default": "/assets/img/culto-domingo.jpg"
+    },
+    {
+     "key": "events.hero.image_alt",
+     "label": "Descrição da imagem (acessibilidade)",
+     "type": "text",
+     "default": "Convite para o culto de domingo, às 18h"
+    },
+    {
+     "key": "events.week.title",
+     "label": "Título da programação semanal",
+     "type": "text",
+     "default": "Programação semanal"
+    },
+    {
+     "key": "events.special.title",
+     "label": "Título dos eventos especiais",
+     "type": "text",
+     "default": "Eventos especiais"
+    },
+    {
+     "key": "events.special.empty",
+     "label": "Mensagem quando não há eventos especiais",
+     "type": "textarea",
+     "default": "Nenhum evento especial marcado no momento. Acompanhe o nosso Instagram para novidades."
+    },
+    {
+     "key": "events.note",
+     "label": "Aviso no fim da página",
+     "type": "text",
+     "default": "Atualizamos esta agenda regularmente. Confira também o nosso Instagram para novidades."
+    }
+   ]
+  },
+  {
+   "id": "pastores",
+   "label": "Página Pastores",
+   "fields": [
+    {
+     "key": "pastors.hero.title",
+     "label": "Título",
+     "type": "text",
+     "default": "Nossos Pastores"
+    },
+    {
+     "key": "pastors.hero.text",
+     "label": "Texto de apresentação",
+     "type": "textarea",
+     "default": "Uma liderança dedicada a cuidar da igreja, formar discípulos e conduzir a Comunidade Entre Nações na sua visão para Petrolina."
+    },
+    {
+     "key": "pastors.note",
+     "label": "Aviso no fim da página",
+     "type": "textarea",
+     "default": "Fotos e biografias oficiais serão atualizadas em breve com o material completo do Instagram @cenpetrolina.",
+     "help": "Apague o texto para esconder o aviso."
+    }
+   ]
+  },
+  {
+   "id": "ofertas",
+   "label": "Página Ofertas e Dízimos",
+   "fields": [
+    {
+     "key": "giving.hero.title",
+     "label": "Título",
+     "type": "text",
+     "default": "Ofertas e Dízimos"
+    },
+    {
+     "key": "giving.hero.text",
+     "label": "Texto de apresentação",
+     "type": "textarea",
+     "default": "Dar faz parte da nossa adoração. Cada contribuição sustenta a obra da CEN em Petrolina e o cuidado com quem precisa."
+    },
+    {
+     "key": "giving.hero.image",
+     "label": "Imagem",
+     "type": "image",
+     "default": "/assets/img/post-dizimos.jpg"
+    },
+    {
+     "key": "giving.hero.image_alt",
+     "label": "Descrição da imagem (acessibilidade)",
+     "type": "text",
+     "default": "Arte sobre dízimos e ofertas"
+    },
+    {
+     "key": "giving.tithe.title",
+     "label": "Bloco 1: título",
+     "type": "text",
+     "default": "Dízimo"
+    },
+    {
+     "key": "giving.tithe.text",
+     "label": "Bloco 1: texto",
+     "type": "textarea",
+     "default": "Um ato de fé e gratidão, devolvendo a Deus a primeira parte do que Ele nos confia."
+    },
+    {
+     "key": "giving.offering.title",
+     "label": "Bloco 2: título",
+     "type": "text",
+     "default": "Oferta"
+    },
+    {
+     "key": "giving.offering.text",
+     "label": "Bloco 2: texto",
+     "type": "textarea",
+     "default": "Uma contribuição espontânea para projetos, ações sociais e a expansão da obra."
+    },
+    {
+     "key": "giving.presential.title",
+     "label": "Bloco 3: título",
+     "type": "text",
+     "default": "Presencial"
+    },
+    {
+     "key": "giving.presential.text",
+     "label": "Bloco 3: texto",
+     "type": "textarea",
+     "default": "Você também pode contribuir diretamente durante os cultos, aos domingos às 18h."
+    },
+    {
+     "key": "giving.pix.title",
+     "label": "PIX: título",
+     "type": "text",
+     "default": "Contribua via PIX"
+    },
+    {
+     "key": "giving.pix.text",
+     "label": "PIX: texto",
+     "type": "textarea",
+     "default": "A forma mais rápida de contribuir com a CEN. Copie a chave abaixo e cole no aplicativo do seu banco."
+    },
+    {
+     "key": "giving.pix.key",
+     "label": "Chave PIX",
+     "type": "text",
+     "default": "",
+     "help": "Somente o administrador pode alterar. Se ficar vazio, o site mostra a mensagem abaixo.",
+     "admin_only": true
+    },
+    {
+     "key": "giving.pix.empty",
+     "label": "Mensagem quando a chave PIX ainda não foi cadastrada",
+     "type": "text",
+     "default": "A chave PIX será divulgada em breve."
+    },
+    {
+     "key": "giving.bank.title",
+     "label": "Transferência: título",
+     "type": "text",
+     "default": "Transferência bancária"
+    },
+    {
+     "key": "giving.bank.bank",
+     "label": "Banco",
+     "type": "text",
+     "default": "",
+     "admin_only": true
+    },
+    {
+     "key": "giving.bank.agency",
+     "label": "Agência",
+     "type": "text",
+     "default": "",
+     "admin_only": true
+    },
+    {
+     "key": "giving.bank.account",
+     "label": "Conta",
+     "type": "text",
+     "default": "",
+     "admin_only": true
+    },
+    {
+     "key": "giving.bank.holder",
+     "label": "Favorecido",
+     "type": "text",
+     "default": "Comunidade Entre Nações",
+     "admin_only": true
+    },
+    {
+     "key": "giving.bank.doc",
+     "label": "CNPJ",
+     "type": "text",
+     "default": "",
+     "admin_only": true
+    }
+   ]
+  },
+  {
+   "id": "oracao",
+   "label": "Página Pedido de Oração",
+   "fields": [
+    {
+     "key": "prayer.hero.title",
+     "label": "Título",
+     "type": "text",
+     "default": "Pedido de Oração"
+    },
+    {
+     "key": "prayer.hero.text",
+     "label": "Texto de apresentação",
+     "type": "textarea",
+     "default": "Compartilhe seu pedido com a nossa equipe de intercessão. Toda mensagem é lida com cuidado e tratada com confidencialidade."
+    },
+    {
+     "key": "prayer.hero.image",
+     "label": "Imagem",
+     "type": "image",
+     "default": "/assets/img/post-deserto.jpg"
+    },
+    {
+     "key": "prayer.hero.image_alt",
+     "label": "Descrição da imagem (acessibilidade)",
+     "type": "text",
+     "default": "Pessoa em oração durante um culto"
+    },
+    {
+     "key": "prayer.privacy",
+     "label": "Aviso abaixo do formulário",
+     "type": "textarea",
+     "default": "Seu pedido é lido apenas pela equipe de intercessão."
+    },
+    {
+     "key": "prayer.success.title",
+     "label": "Mensagem de sucesso: título",
+     "type": "text",
+     "default": "Pedido enviado"
+    },
+    {
+     "key": "prayer.success.text",
+     "label": "Mensagem de sucesso: texto",
+     "type": "textarea",
+     "default": "Recebemos o seu pedido e vamos orar por você. Deus abençoe!"
+    }
+   ]
+  },
+  {
+   "id": "membro",
+   "label": "Página Área do Membro",
+   "fields": [
+    {
+     "key": "member.hero.title",
+     "label": "Título",
+     "type": "text",
+     "default": "Área do Membro"
+    },
+    {
+     "key": "member.hero.text",
+     "label": "Texto de apresentação",
+     "type": "textarea",
+     "default": "Cadastre-se para se tornar um membro reconhecido da CEN e manter contato direto com a nossa liderança."
+    },
+    {
+     "key": "member.hero.image",
+     "label": "Imagem",
+     "type": "image",
+     "default": "/assets/img/post-presenca.jpg"
+    },
+    {
+     "key": "member.hero.image_alt",
+     "label": "Descrição da imagem (acessibilidade)",
+     "type": "text",
+     "default": "Comunidade reunida em culto"
+    },
+    {
+     "key": "member.benefits",
+     "label": "Vantagens de se cadastrar (uma por linha)",
+     "type": "textarea",
+     "default": "Receba os avisos e novidades da programação.\nGanhe uma saudação especial de aniversário da nossa equipe.\nFique por dentro das turmas, grupos e encontros da igreja."
+    },
+    {
+     "key": "member.privacy",
+     "label": "Aviso de privacidade",
+     "type": "textarea",
+     "default": "Seus dados são usados apenas pela CEN para manter contato, organizar a comunidade e enviar comunicados. Nunca são compartilhados com terceiros."
+    },
+    {
+     "key": "member.consent",
+     "label": "Texto da caixa de autorização",
+     "type": "text",
+     "default": "Autorizo a CEN a usar meus dados para manter contato comigo e enviar comunicados."
+    },
+    {
+     "key": "member.success.title",
+     "label": "Mensagem de sucesso: título",
+     "type": "text",
+     "default": "Cadastro recebido!"
+    },
+    {
+     "key": "member.success.text",
+     "label": "Mensagem de sucesso: texto",
+     "type": "textarea",
+     "default": "Nossa equipe vai confirmar seus dados em breve e você já faz parte da nossa lista de contatos."
+    }
+   ]
+  }
+ ],
+ "collections": {
+  "events": [
+   {
+    "title": "A Trilha",
+    "weekday": 2,
+    "event_date": null,
+    "day_label": "",
+    "time_label": "19h30",
+    "location": "CEN Petrolina",
+    "description": "Encontro semanal da nossa comunidade, toda terça-feira.",
+    "image": ""
+   },
+   {
+    "title": "Pequenos Grupos (PGs)",
+    "weekday": 3,
+    "event_date": null,
+    "day_label": "",
+    "time_label": "19h30",
+    "location": "CEN Petrolina",
+    "description": "Encontros em pequenos grupos para conviver, orar e crescer juntos na fé.",
+    "image": ""
+   },
+   {
+    "title": "Sala de Oração",
+    "weekday": 4,
+    "event_date": null,
+    "day_label": "",
+    "time_label": "19h30",
+    "location": "CEN Petrolina",
+    "description": "Um tempo de oração em conjunto durante a semana.",
+    "image": ""
+   },
+   {
+    "title": "Reunião de Teens",
+    "weekday": 6,
+    "event_date": null,
+    "day_label": "",
+    "time_label": "16h",
+    "location": "CEN Petrolina",
+    "description": "Encontro semanal dos teens.",
+    "image": ""
+   },
+   {
+    "title": "Reunião de Jovens",
+    "weekday": 6,
+    "event_date": null,
+    "day_label": "",
+    "time_label": "19h30",
+    "location": "CEN Petrolina",
+    "description": "Encontro semanal dos jovens.",
+    "image": ""
+   },
+   {
+    "title": "Culto de Celebração",
+    "weekday": 0,
+    "event_date": null,
+    "day_label": "",
+    "time_label": "18h",
+    "location": "CEN Petrolina",
+    "description": "Um tempo de adoração, palavra e comunhão para toda a família. Chegue um pouco antes para ser recebido pela nossa equipe de boas-vindas.",
+    "image": ""
+   }
+  ],
+  "pastors": [
+   {
+    "name": "Pr. Ítalo Bruno",
+    "role": "Pastor Líder",
+    "bio": "Lidera a Comunidade Entre Nações em Petrolina, conduzindo a igreja na visão de formar discípulos que fazem discípulos e implantar os valores do Reino na cidade.",
+    "photo": ""
+   },
+   {
+    "name": "Pra. Karol Gonçalves",
+    "role": "Pastora",
+    "bio": "Serve ao lado da liderança da CEN no cuidado pastoral da igreja, no discipulado e na formação de famílias sacerdotais.",
+    "photo": ""
+   }
+  ],
+  "highlights": [
+   {
+    "title": "CEN Kids 2026",
+    "caption": "Temos uma novidade para você!",
+    "image": "/assets/img/destaque-kids.jpg",
+    "link": ""
+   },
+   {
+    "title": "Qual é o seu dom?",
+    "caption": "",
+    "image": "/assets/img/destaque-dons.jpg",
+    "link": ""
+   },
+   {
+    "title": "Por que participar de um Pequeno Grupo?",
+    "caption": "",
+    "image": "/assets/img/destaque-pg.jpg",
+    "link": ""
+   },
+   {
+    "title": "Domingo, às 18h",
+    "caption": "Culto de Celebração",
+    "image": "/assets/img/culto-domingo.jpg",
+    "link": ""
+   }
+  ]
+ }
+}
