@@ -1,1 +1,37 @@
 
+name: Conferir código
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  php:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.4', '8.2', '8.3']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+      - name: Sintaxe de todos os arquivos PHP
+        run: |
+          find . -name '*.php' -not -path './dev/*' -print0 | xargs -0 -n1 php -l
+      - name: Esquema de conteúdo é um JSON válido
+        run: php -r 'json_decode(file_get_contents("app/content-schema.json"), false, 512, JSON_THROW_ON_ERROR); echo "ok\n";'
+
+  javascript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Sintaxe dos scripts
+        run: |
+          for f in assets/js/*.js dev/*.mjs; do node --check "$f"; done
+      - name: Verificação do projeto (schema x código, rotas, PHP 7.4, segredos)
+        run: python3 dev/check_project.py .
